@@ -1,4 +1,4 @@
-package com.derlishn.gamemvvmapp.ui.theme
+package com.derlishn.gamemvvmapp.presentation.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
