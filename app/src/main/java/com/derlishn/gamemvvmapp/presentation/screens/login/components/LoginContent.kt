@@ -75,7 +75,7 @@ fun BoxHeader(){
                 contentDescription = ""
             )
             Text(
-                text = "FIREBASE"
+                text = "FIREBASE MVVM"
             )
         }
     }
