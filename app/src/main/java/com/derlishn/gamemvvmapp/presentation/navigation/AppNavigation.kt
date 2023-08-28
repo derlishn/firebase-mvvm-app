@@ -18,7 +18,7 @@ fun AppNavigation(navController: NavHostController) {
             LoginScreen(navController)
         }
         composable(route = AppScreen.Singup.route) {
-            SingupScreen()
+            SingupScreen(navController)
         }
     }
 
