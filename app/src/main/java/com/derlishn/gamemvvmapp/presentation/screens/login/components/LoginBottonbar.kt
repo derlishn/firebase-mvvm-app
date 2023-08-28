@@ -1,5 +1,6 @@
 package com.derlishn.gamemvvmapp.presentation.screens.login.components
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -14,9 +15,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
+import com.derlishn.gamemvvmapp.presentation.navigation.AppScreen
 
 @Composable
-fun LoginBottonBar() {
+fun LoginBottonBar(navController: NavHostController) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -30,6 +34,10 @@ fun LoginBottonBar() {
         )
         Spacer(modifier = Modifier.width(7.dp))
         Text(
+            modifier = Modifier
+                .clickable {
+                           navController.navigate(route = AppScreen.Singup.route)
+            },
             text = "Registrate Aqui",
             fontSize = 14.sp,
             color = Color.Red,
@@ -41,5 +49,5 @@ fun LoginBottonBar() {
 @Preview
 @Composable
 fun PreviewLoginBottonBar() {
-    LoginBottonBar()
+    LoginBottonBar(rememberNavController())
 }
